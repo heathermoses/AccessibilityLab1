@@ -7,7 +7,6 @@ exports.submitChange = (req, res) => {
 		unavailableMessage: req.body.unavailableMessage,
 		availableBackgroundColor: req.body.availableBackgroundColor,
 		unavailableBackgroundColor: req.body.unavailableBackgroundColor,
-		shake: req.body.shake // change made
 	}).then(() => {
 		res.sendStatus(200);
 	});

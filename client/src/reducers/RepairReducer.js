@@ -6,14 +6,13 @@ export const types = {
 };
 
 export const initialState = {
-	availableMessage: '', // change made
-	unavailableMessage: '', // change made
+	availableMessage: '',
+	unavailableMessage: '',
 	availableBackgroundColor: '#FFFFFF',
 	unavailableBackgroundColor: '#FFFFFF',
 	currentTab: 1,
 	repairVisible: false,
 	changesApplied: false,
-	shake: false // change made
 };
 
 export default (state = initialState, action) => {
@@ -25,7 +24,6 @@ export default (state = initialState, action) => {
 				unavailableMessage: action.unavailableMessage,
 				availableBackgroundColor: action.availableBackgroundColor,
 				unavailableBackgroundColor: action.unavailableBackgroundColor,
-				shake: action.shake, // change made (don't know what this does)
 				changesApplied: true
 			};
 
@@ -53,13 +51,12 @@ export default (state = initialState, action) => {
 };
 
 export const actions = {
-	updateRepair: (availableMessage, unavailableMessage, availableBackgroundColor, unavailableBackgroundColor, shake) => ({ // change made
+	updateRepair: (availableMessage, unavailableMessage, availableBackgroundColor, unavailableBackgroundColor) => ({
 		type: types.UPDATE_REPAIR,
 		availableMessage,
 		unavailableMessage,
 		availableBackgroundColor,
 		unavailableBackgroundColor,
-		shake // change made
 	}),
 	updateTab: (tab) => ({ type: types.UPDATE_TAB, tab }),
 	openRepair: () => ({ type: types.OPEN_REPAIR }),

@@ -5,13 +5,12 @@ const endpoints = {
 };
 
 export default {
-	submitRepair: (availableMessage, unavailableMessage, availableBackgroundColor, unavailableBackgroundColor, shake) => { // change made
+	submitRepair: (availableMessage, unavailableMessage, availableBackgroundColor, unavailableBackgroundColor) => {
 		return API.postWithBody(process.env.REACT_APP_SERVER_URL + endpoints.SUBMIT_REPAIR, {
 			availableMessage,
 			unavailableMessage,
 			availableBackgroundColor,
 			unavailableBackgroundColor,
-			shake // change made
 		});
 	}
 };

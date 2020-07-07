@@ -30,7 +30,6 @@ export const types = {
 	TOGGLE_SOUND: '@accessibility-lab/audio-cue/game/update_sound_status',
 	ADD_RESULT: '@accessibility-lab/audio-cue/game/add_result',
 	UPDATE_CONGRATULATION_MESSAGE: '@accessibility-lab/audio-cue/game/update_congratulation_message',
-	SHAKE: '@accessibility-lab/audio-cue/game/shake' // change made
 };
 
 export const initialState = {

@@ -13,7 +13,6 @@ exports.submitChange = (data) => {
 				unavailablemessage: data.unavailableMessage,
 				availablebackgroundcolor: data.availableBackgroundColor,
 				unavailablebackgroundcolor: data.unavailableBackgroundColor,
-				shake: data.shake // change made
 			});
 		})
 		.then(() => {

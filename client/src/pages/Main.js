@@ -47,7 +47,6 @@ const mapStateToProps = (state) => {
 		currentTab: state.repair.currentTab,
 		repairVisible: state.repair.repairVisible,
 		changesApplied: state.repair.changesApplied,
-		shake: state.repair.shake // change made
 	};
 };
 
@@ -86,7 +85,6 @@ class Main extends Component {
 			unavailableMessage,
 			availableBackgroundColor,
 			unavailableBackgroundColor,
-			shake, // change made
 			currentTab,
 			repairVisible,
 			changesApplied,
@@ -128,7 +126,6 @@ class Main extends Component {
 						unavailableMessage,
 						availableBackgroundColor,
 						unavailableBackgroundColor,
-						shake, // change made
 						currentTab,
 						repairVisible,
 						changesApplied
@@ -147,7 +144,6 @@ class Main extends Component {
 						unavailableMessage,
 						availableBackgroundColor,
 						unavailableBackgroundColor,
-						shake, // change made
 						currentTab
 					}}
 					handlers={actions}

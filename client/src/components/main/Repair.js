@@ -16,7 +16,6 @@ class Repair extends Component {
 			unavailableBackgroundColor: null,
 			availableBackgroundColorPopup: false,
 			unavailableBackgroundColorPopup: false,
-			shake: false // change made
 		};
 	}
 
@@ -28,7 +27,6 @@ class Repair extends Component {
 			unavailableMessage: data.unavailableMessage,
 			availableBackgroundColor: data.availableBackgroundColor,
 			unavailableBackgroundColor: data.unavailableBackgroundColor,
-			shake: data.shake // change made (don't know what this does)
 		});
 	}
 
@@ -39,7 +37,6 @@ class Repair extends Component {
 			unavailableMessage,
 			availableBackgroundColor,
 			unavailableBackgroundColor,
-			shake // change made (don't know what this does)
 		} = this.state;
 
 		event.preventDefault();
@@ -50,7 +47,6 @@ class Repair extends Component {
 			unavailableMessage,
 			availableBackgroundColor,
 			unavailableBackgroundColor,
-			shake // change made
 		);
 
 		// Update the state and close the repair.
@@ -59,7 +55,6 @@ class Repair extends Component {
 			unavailableMessage,
 			availableBackgroundColor,
 			unavailableBackgroundColor,
-			shake // change made
 		);
 		handlers.closeRepair();
 		handlers.updatePopup('The repairs have been made.');
@@ -105,7 +100,6 @@ class Repair extends Component {
 			unavailableBackgroundColor,
 			availableBackgroundColorPopup,
 			unavailableBackgroundColorPopup,
-			shake // change made
 		} = this.state;
 		const jsFileClasses = classNames({
 			code_editor__file: true,
@@ -195,15 +189,6 @@ class Repair extends Component {
 							<span>;</span>
 						</div>
 
-						<div className="code_editor__line">
-							<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							<span className="code_editor__line--darkblue">let&nbsp;</span>
-							<span className="code_editor__line--blue">shake</span>
-							<span>&nbsp;=&nbsp;</span>
-							<span className="code_editor__line--orange">false</span>
-							<span>;</span>
-						</div>
-
 						<div className="code_editor__line">&nbsp;</div>
 						<div className="code_editor__line">
 							<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -238,30 +223,6 @@ class Repair extends Component {
 									name="availableMessage"
 									type="text"
 									defaultValue={data.availableMessage}
-									onChange={this.changeHandler.bind(this)}
-								/>
-							</span>
-							<span className="code_editor__line--orange">'</span>
-							<span>;</span>
-						</div>
-
-						<div className="code_editor__line">
-							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							<span className="code_editor__line--darkgreen">
-								&#47;&#47; Update the variable 'shake' to true
-							</span>
-						</div>
-
-						<div className="code_editor__line code_editor__line-background--light">
-							<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-							<span className="code_editor__line--blue">shake</span>
-							<span>&nbsp;=&nbsp;</span>
-							<span className="code_editor__line--orange">'</span>
-							<span>
-								<input
-									name="shake" // change made
-									type="text"
-									defaultValue={data.shake} // change made
 									onChange={this.changeHandler.bind(this)}
 								/>
 							</span>
